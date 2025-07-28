@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forensic Metadata Viewer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Gambar / Video</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" required><br><br>
+      <button type="submit">Upload & View Metadata</button>
+    </form>
+    {% if metadata %}
+      <h3>Metadata:</h3>
+      <pre>{{ metadata | tojson(indent=2) }}</pre>
+      {% if gps %}
+        <p><a href="/map">Lihat Lokasi di Peta</a></p>
+      {% endif %}
+      <p><a href="/pdf">Download PDF</a></p>
+    {% endif %}
+  </div>
+</body>
+</html>

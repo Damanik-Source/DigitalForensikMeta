@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: metadata-extractor
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python server.py"
+    envVars:
+      - key: SECRET_KEY
+        value: secretkey123
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        value: admin123

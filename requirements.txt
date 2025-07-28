@@ -1,0 +1,7 @@
+Flask
+Flask-Login
+python-dotenv
+exifread
+reportlab
+Pillow
+folium

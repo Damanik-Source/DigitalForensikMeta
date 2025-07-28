@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log Metadata</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Riwayat Metadata</h2>
+    <a href="/logout">Logout</a>
+    <ul>
+      {% for item in log %}
+        <li><strong>{{ item.timestamp }}</strong>: {{ item.filename }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
